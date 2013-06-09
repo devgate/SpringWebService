@@ -1,0 +1,42 @@
+package com.drjun.board.repository;
+
+import com.drjun.board.model.Board;
+import org.springframework.stereotype.Repository;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created with IntelliJ IDEA.
+ * User: dr.jun
+ * Date: 13. 6. 7.
+ * Time: 오후 5:48
+ * To change this template use File | Settings | File Templates.
+ */
+@Repository
+public class BoardRepository {
+
+    private static int boardId = 1;
+
+    private List<Board> boardList = new ArrayList<Board>();
+
+    public BoardRepository() {
+
+        Board board = new Board("title", "writer", "pw", "content");
+        Board board2 = new Board("title2", "writer2", "pw2", "content2");
+
+        boardList.add(board);
+        boardList.add(board2);
+    }
+
+
+    public List<Board> getBoardList(){
+        return boardList;
+    }
+
+    public void add(Board board){
+        boardList.add(board);
+    }
+
+
+}
