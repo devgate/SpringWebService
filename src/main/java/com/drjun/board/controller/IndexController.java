@@ -38,13 +38,15 @@ public class IndexController {
 
         return "redirect:/board/list";
 
-
     }
 
     @RequestMapping(value = "/del", method = RequestMethod.GET)
     public String del(ModelAndView modelAndView,Integer id){
+
         boardService.deleleComments(id);
+
         return "redirect:/board/list";
+
     }
 
 
