@@ -22,7 +22,6 @@ public class IndexController {
     @Autowired
     BoardService boardService;
 
-
     @RequestMapping(value="/list", method = RequestMethod.GET)
     public ModelAndView getCommentsList(ModelAndView modelAndView) {
 
@@ -37,9 +36,14 @@ public class IndexController {
 
         boardService.addComments(board);
 
-        //modelAndView.setViewName("/boardlist");
-        //modelAndView.addObject("boardList", boardService.getBoardList());
+        return "redirect:/board/list";
 
+
+    }
+
+    @RequestMapping(value = "/del", method = RequestMethod.GET)
+    public String del(ModelAndView modelAndView,Integer id){
+        boardService.deleleComments(id);
         return "redirect:/board/list";
     }
 

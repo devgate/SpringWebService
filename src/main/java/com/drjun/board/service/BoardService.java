@@ -27,4 +27,8 @@ public class BoardService {
     public void addComments(Board board) {
         boardRepository.add(board);
     }
+
+    public void deleleComments(int id) {
+        boardRepository.delete(id);
+    }
 }

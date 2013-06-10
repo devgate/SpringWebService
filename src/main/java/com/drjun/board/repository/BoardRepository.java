@@ -39,4 +39,14 @@ public class BoardRepository {
     }
 
 
+    public void delete(int id) {
+
+        for( Board board: boardList){
+            if(board.getId() == id){
+                boardList.remove(board);
+                break;
+            }
+        }
+
+    }
 }

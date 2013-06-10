@@ -11,46 +11,30 @@ import java.util.Random;
  */
 public class Board {
 
-    public Board(){
-        if(id == 0){
-            Random oRandom = new Random();
-            int index = oRandom.nextInt(10000000) + 1;
-            this.id = index;
-        }
-    }
-
-    public Board(int id, String title, String writer, String pw, String content) {
-
-        if(id == 0){
-            Random oRandom = new Random();
-            int index = oRandom.nextInt(10000000) + 1;
-            this.id = index;
-        }else{
-            this.id = id;
-        }
-
-        this.title = title;
-        this.writer = writer;
-        this.pw = pw;
-        this.content = content;
-    }
-
     private int id;
     private String title;
     private String writer;
     private String pw;
     private String content;
 
+    public Board(){
+        int index = makeId();
+        this.id = index;
+    }
+
     public Board(String title, String writer, String pw, String Content) {
 
-        Random oRandom = new Random();
-        int index = oRandom.nextInt(10000000) + 1;
-
+        int index = makeId();
         setId(index);
         setTitle(title);
         setWriter(writer);
         setPw(pw);
         setContent(Content);
+    }
+
+    private int makeId() {
+        Random oRandom = new Random();
+        return oRandom.nextInt(10000000) + 1;
     }
 
     public int getId() {
