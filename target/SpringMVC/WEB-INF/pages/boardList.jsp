@@ -3,14 +3,18 @@
 <%@ page import="com.drjun.board.model.Board" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 
 <html>
 <body>
+<spring:hasBindErrors name="board" />
+<form:errors path="board"/>
 <form name="boardForm" id="boardForm" method="POST" action="/board/add">
 
 
 <h1>Board List</h1>
-<table style="border: 1px">
+<table>
 <c:forEach var="board" items="${boardList}">
 <tr >
     <%--<td>${board.id}</td>--%>

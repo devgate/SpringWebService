@@ -4,6 +4,7 @@ import com.drjun.board.model.Board;
 import com.drjun.board.service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -24,29 +25,28 @@ public class IndexController {
 
     @RequestMapping(value="/list", method = RequestMethod.GET)
     public ModelAndView getCommentsList(ModelAndView modelAndView) {
-
         modelAndView.setViewName("/boardList");
         modelAndView.addObject("boardList", boardService.getBoardList());
-
         return modelAndView;
     }
 
     @RequestMapping(value="/add", method = RequestMethod.POST)
-    public String add(ModelAndView modelAndView, Board board) {
+    public String add(Board board,  ModelAndView modelAndView, BindingResult bindingResult) {
+
+        new BoardValidator().validate(board, bindingResult);
+
+        if(bindingResult.hasErrors()){
+            return "redirect:/board/list";
+        }
 
         boardService.addComments(board);
-
         return "redirect:/board/list";
-
     }
 
     @RequestMapping(value = "/del", method = RequestMethod.GET)
     public String del(ModelAndView modelAndView,Integer id){
-
         boardService.deleleComments(id);
-
         return "redirect:/board/list";
-
     }
 
 
