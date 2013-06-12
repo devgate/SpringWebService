@@ -1,5 +1,8 @@
 package com.drjun.board.model;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
+import javax.validation.constraints.NotNull;
 import java.util.Random;
 
 /**
@@ -9,9 +12,11 @@ import java.util.Random;
  * Time: 오후 5:50
  * To change this template use File | Settings | File Templates.
  */
-public class Board {
+public class Board{
 
+    @NotNull
     private int id;
+    @NotEmpty
     private String title;
     private String writer;
     private String pw;

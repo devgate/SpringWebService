@@ -9,12 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.validation.Valid;
+
 /**
- * Created with IntelliJ IDEA.
  * User: dr.jun
- * Date: 13. 6. 7.
- * Time: 오후 5:43
- * To change this template use File | Settings | File Templates.
  */
 @Controller
 @RequestMapping("/board")
@@ -26,20 +24,22 @@ public class IndexController {
     @RequestMapping(value="/list", method = RequestMethod.GET)
     public ModelAndView getCommentsList(ModelAndView modelAndView) {
         modelAndView.setViewName("/boardList");
+        modelAndView.addObject("board", new Board());
         modelAndView.addObject("boardList", boardService.getBoardList());
+
         return modelAndView;
     }
 
+
     @RequestMapping(value="/add", method = RequestMethod.POST)
-    public String add(Board board,  ModelAndView modelAndView, BindingResult bindingResult) {
-
-        new BoardValidator().validate(board, bindingResult);
-
+    public String add(@Valid Board board, BindingResult bindingResult) {
         if(bindingResult.hasErrors()){
+            System.out.println("=============  Error ================");
             return "redirect:/board/list";
         }
 
         boardService.addComments(board);
+
         return "redirect:/board/list";
     }
 
