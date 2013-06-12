@@ -23,6 +23,7 @@ public class IndexController {
 
     @RequestMapping(value="/list", method = RequestMethod.GET)
     public ModelAndView getCommentsList(ModelAndView modelAndView) {
+
         modelAndView.setViewName("/boardList");
         modelAndView.addObject("board", new Board());
         modelAndView.addObject("boardList", boardService.getBoardList());
@@ -30,9 +31,9 @@ public class IndexController {
         return modelAndView;
     }
 
-
     @RequestMapping(value="/add", method = RequestMethod.POST)
     public String add(@Valid Board board, BindingResult bindingResult) {
+
         if(bindingResult.hasErrors()){
             System.out.println("=============  Error ================");
             return "redirect:/board/list";
@@ -45,7 +46,9 @@ public class IndexController {
 
     @RequestMapping(value = "/del", method = RequestMethod.GET)
     public String del(ModelAndView modelAndView,Integer id){
+
         boardService.deleleComments(id);
+
         return "redirect:/board/list";
     }
 

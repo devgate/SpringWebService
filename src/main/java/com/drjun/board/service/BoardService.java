@@ -8,11 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * Created with IntelliJ IDEA.
  * User: dr.jun
- * Date: 13. 6. 7.
- * Time: 오후 5:47
- * To change this template use File | Settings | File Templates.
  */
 @Service
 public class BoardService {

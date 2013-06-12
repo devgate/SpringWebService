@@ -6,11 +6,7 @@ import javax.validation.constraints.NotNull;
 import java.util.Random;
 
 /**
- * Created with IntelliJ IDEA.
  * User: dr.jun
- * Date: 13. 6. 7.
- * Time: 오후 5:50
- * To change this template use File | Settings | File Templates.
  */
 public class Board{
 

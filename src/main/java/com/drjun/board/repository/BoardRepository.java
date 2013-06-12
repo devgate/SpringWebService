@@ -7,11 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created with IntelliJ IDEA.
  * User: dr.jun
- * Date: 13. 6. 7.
- * Time: 오후 5:48
- * To change this template use File | Settings | File Templates.
  */
 @Repository
 public class BoardRepository {
