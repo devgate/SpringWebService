@@ -1,7 +1,7 @@
 package com.drjun.board.service;
 
 import com.drjun.board.model.Board;
-import com.drjun.board.repository.BoardRepository;
+import com.drjun.board.repository.BoardRepositoryImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +14,7 @@ import java.util.List;
 public class BoardService {
 
     @Autowired
-    BoardRepository boardRepository;
+    BoardRepositoryImpl boardRepository;
 
     public List<Board> getBoardList(){
         return boardRepository.getBoardList();

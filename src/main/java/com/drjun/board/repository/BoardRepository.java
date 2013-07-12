@@ -1,48 +1,16 @@
 package com.drjun.board.repository;
 
 import com.drjun.board.model.Board;
-import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
  * User: dr.jun
  */
-@Repository
-public class BoardRepository {
+public interface BoardRepository {
 
-    private static int boardId = 1;
+    public List<Board> getBoardList();
+    public void add(Board board);
+    public void delete(int i);
 
-    private List<Board> boardList = new ArrayList<Board>();
-
-    public BoardRepository() {
-
-        Board board = new Board("title", "writer", "pw", "content");
-        Board board2 = new Board("title2", "writer2", "pw2", "content2");
-
-        boardList.add(board);
-        boardList.add(board2);
-    }
-
-
-    public List<Board> getBoardList(){
-        return boardList;
-    }
-
-    public void add(Board board){
-        boardList.add(board);
-    }
-
-
-    public void delete(int id) {
-
-        for( Board board: boardList){
-            if(board.getId() == id){
-                boardList.remove(board);
-                break;
-            }
-        }
-
-    }
 }

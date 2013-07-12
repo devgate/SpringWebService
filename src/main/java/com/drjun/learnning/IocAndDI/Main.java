@@ -28,5 +28,6 @@ public class Main {
         hello.print();
 
         System.out.println(ac.getBean("printer").toString());
+        System.out.println(ac.getBean("printer").toString());
     }
 }
