@@ -3,6 +3,7 @@ package com.drjun.learnning.IocAndDI;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.RuntimeBeanReference;
 import org.springframework.beans.factory.support.RootBeanDefinition;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.StaticApplicationContext;
 
 /**
@@ -12,7 +13,9 @@ import org.springframework.context.support.StaticApplicationContext;
  * Time: 오후 8:53
  * To change this template use File | Settings | File Templates.
  */
+@Configuration
 public class Main {
+
     public static void main(String[] args) {
 
         StaticApplicationContext ac = new StaticApplicationContext();
@@ -29,5 +32,9 @@ public class Main {
 
         System.out.println(ac.getBean("printer").toString());
         System.out.println(ac.getBean("printer").toString());
+
+        Config config = new Config();
+        System.out.println("[JJI]" + config.getOsName());
+
     }
 }
