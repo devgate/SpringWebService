@@ -14,12 +14,12 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 @Repository
-public class BoardRepositoryImpl implements BoardRepository{
+public class BoardRepositoryMemoryImpl implements BoardRepository{
     private static int boardId = 1;
 
     private List<Board> boardList = new ArrayList<Board>();
 
-    public BoardRepositoryImpl() {
+    public BoardRepositoryMemoryImpl() {
         Board board = new Board("title", "writer", "pw", "content");
         Board board2 = new Board("title2", "writer2", "pw2", "content2");
 

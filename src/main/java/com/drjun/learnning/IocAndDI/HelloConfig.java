@@ -1,7 +1,6 @@
 package com.drjun.learnning.IocAndDI;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 /**
  * Created with IntelliJ IDEA.
@@ -10,7 +9,6 @@ import org.springframework.context.annotation.Configuration;
  * Time: 오후 1:59
  * To change this template use File | Settings | File Templates.
  */
-@Configuration
 public class HelloConfig {
     @Bean
     public Hello hello(){
