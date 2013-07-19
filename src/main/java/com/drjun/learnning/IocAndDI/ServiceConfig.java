@@ -9,15 +9,19 @@ package com.drjun.learnning.IocAndDI;
  */
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 import javax.sql.DataSource;
 
-@Configuration
+//@Configuration
 public class ServiceConfig{
     @Bean
     public DataSource dataSource(){
         //SimpleDriverDataSource dataSource = new SimpleDriverDataSource();
+        //dataSource.setDriverClass("org.hsqldb.jdbc.JDBCDriver");
+
+        //return dataSource;
+
         return null;
+
     }
 }

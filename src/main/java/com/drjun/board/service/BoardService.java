@@ -15,6 +15,7 @@ public class BoardService {
 
     @Autowired
     BoardRepositoryMemoryImpl boardRepositoryMemory;
+    //BoardRepositoryMysqlImpl boardRepositoryMysql;
 
     public List<Board> getBoardList(){
         return boardRepositoryMemory.getBoardList();
