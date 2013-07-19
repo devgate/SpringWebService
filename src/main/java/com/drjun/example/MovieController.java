@@ -10,9 +10,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/movie")
 public class MovieController {
 
-//  1 insert On dev
+//  0 insert On dev
 
-//  3 insert On feature
 
 	@RequestMapping(value="/{name}", method = RequestMethod.GET)
 	public String getMovie(@PathVariable String name, ModelMap model) {
