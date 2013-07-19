@@ -11,10 +11,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class MovieController {
 
 //  1 insert On dev
-//  2 insert On dev
-//  3 insert On dev
-
-//  4 insert On Feature
 
 
 //  6 insert On Feature
