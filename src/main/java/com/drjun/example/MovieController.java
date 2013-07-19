@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class MovieController {
 
 //  0 insert On dev
+//  0 insert On dev
 
 	@RequestMapping(value="/{name}", method = RequestMethod.GET)
 	public String getMovie(@PathVariable String name, ModelMap model) {
