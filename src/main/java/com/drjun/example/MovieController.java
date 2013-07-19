@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/movie")
 public class MovieController {
 
+//  1 insert On dev
+
 	@RequestMapping(value="/{name}", method = RequestMethod.GET)
 	public String getMovie(@PathVariable String name, ModelMap model) {
 
