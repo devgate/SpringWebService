@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a71e962b-dc4b-48d6-a97c-cec7eef761eb" name="Default" comment="Mysql JDBC연결">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/drjun/example/Filtering.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/drjun/learnning/IocAndDI/Config.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/drjun/learnning/IocAndDI/HelloConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/drjun/learnning/IocAndDI/Main.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/drjun/learnning/IocAndDI/ServiceConfig.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/drjun/designpattern/facade/Database.java" afterPath="$PROJECT_DIR$/src/main/java/com/drjun/designpattern/facade/Database.java" />
-    </list>
+    <list default="true" id="a71e962b-dc4b-48d6-a97c-cec7eef761eb" name="Default" comment="Mysql JDBC연결" />
     <list id="206aabc3-a6ee-4305-abf4-95c3558aa820" name="Failed commit: Default" comment="validation check complete" />
     <list id="840831a1-a836-4ab2-b874-5da5b0eebc7c" name="Failed commit: Default (2)" comment="Mysql JDBC연결" />
     <ignored path="SpringWebService.iws" />
@@ -99,7 +91,7 @@
       <file leaf-file-name="Filtering.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/drjun/example/Filtering.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="37" selection-start="981" selection-end="981" vertical-scroll-proportion="0.52606636">
+            <state line="37" column="37" selection-start="981" selection-end="981" vertical-scroll-proportion="0.625">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -130,7 +122,7 @@
       <file leaf-file-name="MovieController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/drjun/example/MovieController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="7" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
+            <state line="10" column="7" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -1135,7 +1127,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1859" height="1058" extended-state="7" />
+    <frame x="0" y="22" width="1859" height="1058" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1156,7 +1148,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3600221" sideWeight="0.72785485" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27214515" sideWeight="0.9994444" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27214515" sideWeight="0.9994444" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1339,7 +1331,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/drjun/example/MovieController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="7" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
+        <state line="10" column="7" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1355,7 +1347,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/drjun/example/Filtering.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="37" selection-start="981" selection-end="981" vertical-scroll-proportion="0.52606636">
+        <state line="37" column="37" selection-start="981" selection-end="981" vertical-scroll-proportion="0.625">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
