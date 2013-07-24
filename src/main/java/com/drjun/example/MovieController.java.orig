@@ -14,8 +14,8 @@ public class MovieController {
 <<<<<<< HEAD
 //  2 insert On dev
 =======
+>>>>>>> feature/featureC
 //  1 insert On feature
->>>>>>> insert 1 dev
 
 	@RequestMapping(value="/{name}", method = RequestMethod.GET)
 	public String getMovie(@PathVariable String name, ModelMap model) {
