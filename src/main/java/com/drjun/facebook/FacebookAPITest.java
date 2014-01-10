@@ -2,6 +2,10 @@ package com.drjun.facebook;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.scribe.builder.ServiceBuilder;
+import org.scribe.builder.api.FacebookApi;
+import org.scribe.model.Token;
+import org.scribe.oauth.OAuthService;
 import org.springframework.social.connect.support.ConnectionFactoryRegistry;
 import org.springframework.social.facebook.api.Facebook;
 import org.springframework.social.facebook.api.FacebookProfile;
@@ -65,7 +69,7 @@ public class FacebookAPITest {
     @Test
     public void testGetFeedForPerations(){
         // 다른 사람들의 최근 Coca-Cola 게시물
-        String accessTokenStr = "CAACEdEose0cBAAJ4cUxQZCCpGXJ0dbLq9HvqitL3ZBrHZAv2xe00PamPZBJSHlQycR1F3dwTVysci2gPQFU2vyOowgHf3GQjw6pL1B6A8YCpQ4ZAAjNlUby4iUDrc85IdF01dVc5QgoL7Ybya6H94GJQqOuP2e5NotlVA9oU2GwZDZD";
+        String accessTokenStr = "AQCQVbUnzypISpm4LPJUW0hUKUq0syyPcXqekT5oUw14xeEKA5cl6LYXO5OvjR0GUN_ARdzs-HAZDojk_qX1aeYy270WomP0bulk96j1gx1YvVqLA5WjIa4fzQBYrgz_9PFsWmwod5tTwXSewljzRe30jJcWXHS7TxRtH2gpg_RbbmwGAd5GY56FrVZixpsQfdDMs_-kPaeqqKvc88wMn_kP8QEV7tpBejwOmzR0Q8Z6Iw1x2FfGRjvy5O3lpjHl5MyycekFz-A_sJ_Uxo2jSi2Mm_DjgJtts7ARuhXfHGfZ8stu-PIiNn_mbVSWNjpA6rA";
         String appId= "484532874954334";
         String appSecret = "7aaa98d386adb96e6da11b5ad839920e";
 
@@ -85,14 +89,18 @@ public class FacebookAPITest {
     }
 
     @Test
-    public void testGetTimeForUser(){
-        String accessTokenStr = "CAAAAAITEghMBAG5NpCg0h6lZAQb5T4VD7OEMiCYyBXz5GfJYaD29xZAuvGIZBVWsOwPEgDGbB3pMUPS3PisTdf2a7qMZC3uFZAan5d4r6D4Nqns1mr9GeIxWRCUbsMEL0MYrQM01CPj6YEe7iBLXSAYxbIfziCcsZD";
+    public void testGetTimeLineForUser(){
+        //CAAAAAITEghMBAHDlaVT2c3XlSUcDrlEpfZAC04AhhBBnZAPjGzAi6e4SXBfhXphVVHJB8KSLkHgW9TUeZA8Ro6CIUSRzKMqKmISPWmniW1N5KYRGrRIBn66a7JzSuZA0CARByzzvudjrIZBBPfmBb5W4sTQqhVYwZD
+        //CAACEdEose0cBAKqDSZA69gplMHlxPAjOlvZCToYOBFRUqefnsGNZBNsnzczGHZBgkNCMcQ90KpfA9g0HwUDKB6uXuVniDTYZCRpvZA02ZBP5Et4b7QWGgKcz52EpBKVB9DEUiien9BWc0pO76ZAnhTi6djvFSUpj0t4ZD
+
+        String accessTokenStr = "CAAAAAITEghMBAHDlaVT2c3XlSUcDrlEpfZAC04AhhBBnZAPjGzAi6e4SXBfhXphVVHJB8KSLkHgW9TUeZA8Ro6CIUSRzKMqKmISPWmniW1N5KYRGrRIBn66a7JzSuZA0CARByzzvudjrIZBBPfmBb5W4sTQqhVYwZD";
+        //String accessTokenStr = "484532874954334|TRaVwdqbc19eh9KRSCbGLDRHQZ8";
         String appId= "484532874954334";
         String appSecret = "7aaa98d386adb96e6da11b5ad839920e";
         String userId = "devgate";
 
         Facebook facebook = new FacebookTemplate(accessTokenStr);
-        List<Post> posts = facebook.feedOperations().getPosts("zezebono");
+        List<Post> posts = facebook.feedOperations().getPosts("devgate");
 
         for(Post post : posts){
             System.out.println("[getMessage]"+ post.getMessage());
@@ -101,4 +109,19 @@ public class FacebookAPITest {
         }
     }
 
+    @Test
+    public void testGetAccessToken(){
+        String apiKey = "484532874954334";
+        String apiSecret = "7aaa98d386adb96e6da11b5ad839920e";
+        OAuthService service = new ServiceBuilder()
+                .provider(FacebookApi.class)
+                .apiKey(apiKey)
+                .apiSecret(apiSecret)
+                .callback("http://localhost:8080/social/callback.jsp")
+                .build();
+
+        Token token = service.getRequestToken();
+        System.out.println("token = " + token.toString());
+
+    }
 }
