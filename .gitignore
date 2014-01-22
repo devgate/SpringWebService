@@ -12,3 +12,4 @@
 
 # maven
 target
+target/*
