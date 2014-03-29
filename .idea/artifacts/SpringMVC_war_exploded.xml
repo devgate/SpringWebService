@@ -46,6 +46,9 @@
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-crypto:3.1.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-acl:3.1.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-javaconfig:1.0.0.M1" />
+          <element id="library" level="project" name="Maven: org.jsoup:jsoup:1.7.3" />
+          <element id="library" level="project" name="Maven: redis.clients:jedis:2.2.1" />
+          <element id="library" level="project" name="Maven: commons-pool:commons-pool:1.6" />
         </element>
       </element>
     </root>
